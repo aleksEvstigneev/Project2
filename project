@@ -1,0 +1,25 @@
+#Project 2 Hot Dog Calculator
+
+people = int(input('How many people? '))
+hotDogs = int(input('How many hotdogs per person? '))
+total = people * hotDogs
+hotdogsPack = 10
+hotbunsPack = 8
+if total <= hotbunsPack:
+    hotdogCount = 1
+    hotbunsCount = 1
+    hotdogLeftover = hotdogsPack - total
+    hotbunsLeftover = hotbunsPack - total
+    
+    
+else:
+    hotdogCount = total // 10
+    hotbunsCount = total // 8
+    hotdogLeftover = total % 10
+    hotbunsLeftover = total % 8
+
+
+print('The minimum number of packages of hot dog required: ', hotdogCount)
+print('The minimum number of packages of hot dog buns required: ', hotbunsCount)
+print('The number of hot dogs that will be left over: ', hotdogLeftover)
+print('The number of hot dog buns that will be left over: ', hotbunsLeftover)
